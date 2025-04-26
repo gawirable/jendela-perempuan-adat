@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI Components Guide</title>
+  <!-- Google Fonts: Tenor Sans & Martel -->
+  <link href="https://fonts.googleapis.com/css2?family=Martel:wght@400;700&family=Tenor+Sans&display=swap" rel="stylesheet">
+  <!-- Tailwind CDN & Custom Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['"Tenor Sans"', 'sans-serif'],
+            body: ['Martel', 'serif'],
+          },
+          colors: {
+            'multatuli-yellow': '#FFD94D',
+            'multatuli-pink': '#FFD6D6',
+            'multatuli-blue': '#C8F1FF',
+            'multatuli-green': '#E6FFD5',
+            'multatuli-black': '#000',
+            'multatuli-gray': '#E5E5E5',
+            'multatuli-lightgray': '#EDEDED',
+            'jpa-red': '#FF6F5B',
+            'jpa-green': '#6FD7A7',
+            'jpa-purple': '#7B4D6E',
+            'jpa-yellow': '#FFD600',
+            'jpa-brown': '#A16A2B',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white p-8 font-body">
+  <!-- Heading & Typography -->
+  <section class="mb-8">
+    <h1 class="font-heading text-4xl font-bold text-multatuli-black mb-2">Heading (Tenor Sans)</h1>
+    <h2 class="font-heading text-2xl font-semibold text-multatuli-black mb-2">Subheading</h2>
+    <p class="font-body text-base text-multatuli-black mb-2">Body text menggunakan Martel sebagai font utama.</p>
+    <span class="font-body text-xs text-multatuli-black">Microcopy / Button</span>
+  </section>
+
+  <!-- Buttons -->
+  <section class="mb-8">
+    <h2 class="font-heading text-2xl mb-4">Buttons</h2>
+    <div class="flex flex-wrap gap-4">
+      <button class="bg-multatuli-black text-white font-heading px-6 py-2 rounded shadow">Primary Button</button>
+      <button class="bg-multatuli-yellow text-multatuli-black font-heading px-6 py-2 rounded shadow">Primary Yellow</button>
+      <button class="bg-white border border-multatuli-black text-multatuli-black font-heading px-6 py-2 rounded shadow">Secondary Button</button>
+      <button class="bg-multatuli-lightgray text-multatuli-gray font-heading px-6 py-2 rounded cursor-not-allowed" disabled>Inactive</button>
+      <button class="bg-jpa-red text-white font-heading px-6 py-2 rounded">JPA Red</button>
+      <button class="bg-jpa-green text-white font-heading px-6 py-2 rounded">JPA Green</button>
+    </div>
+  </section>
+
+  <!-- Checkbox & Radio -->
+  <section class="mb-8">
+    <h2 class="font-heading text-2xl mb-4">Checkbox & Radio</h2>
+    <div class="flex items-center gap-8">
+      <label class="flex items-center gap-2">
+        <input type="checkbox" class="form-checkbox text-multatuli-black rounded" checked>
+        <span class="font-body">Checkbox</span>
+      </label>
+      <label class="flex items-center gap-2">
+        <input type="radio" class="form-radio text-multatuli-black" checked>
+        <span class="font-body">Radio</span>
+      </label>
+    </div>
+  </section>
+
+  <!-- Dropdown -->
+  <section class="mb-8">
+    <h2 class="font-heading text-2xl mb-4">Dropdown</h2>
+    <select class="border border-multatuli-gray rounded px-3 py-2 font-body">
+      <option>Ready to Develop</option>
+      <option>Developed</option>
+    </select>
+  </section>
+
+  <!-- Card / Panel -->
+  <section class="mb-8">
+    <h2 class="font-heading text-2xl mb-4">Card / Panel</h2>
+    <div class="border border-multatuli-gray rounded p-4 bg-white shadow w-full max-w-md mb-4">
+      <h3 class="font-heading text-xl font-bold mb-2">Organisasi</h3>
+      <p class="font-body text-base mb-2">Deskripsi organisasi atau konten panel di sini.</p>
+      <div class="font-body text-xs text-gray-500">Size: Target</div>
+    </div>
+  </section>
+
+  <!-- Input & Form -->
+  <section class="mb-8">
+    <h2 class="font-heading text-2xl mb-4">Input & Form</h2>
+    <input type="text" class="border border-multatuli-gray rounded px-3 py-2 font-body w-full max-w-lg mb-2" placeholder="Mengapa Kawan M bisa ikut di Rapat Redaksi?">
+    <textarea class="border border-multatuli-gray rounded px-3 py-2 font-body w-full max-w-lg" rows="2" placeholder="Jawaban..."></textarea>
+  </section>
+
+  <!-- Color Palette -->
+  <section class="mb-8">
+    <h2 class="font-heading text-2xl mb-4">Color Palette</h2>
+    <div class="flex flex-wrap gap-4 mb-2">
+      <div class="w-10 h-10 rounded-full bg-multatuli-yellow border"></div>
+      <div class="w-10 h-10 rounded-full bg-multatuli-pink border"></div>
+      <div class="w-10 h-10 rounded-full bg-multatuli-blue border"></div>
+      <div class="w-10 h-10 rounded-full bg-multatuli-green border"></div>
+      <div class="w-10 h-10 rounded-full bg-multatuli-black border"></div>
+      <div class="w-10 h-10 rounded-full bg-multatuli-gray border"></div>
+      <div class="w-10 h-10 rounded-full bg-multatuli-lightgray border"></div>
+    </div>
+    <div class="flex flex-wrap gap-4">
+      <div class="w-10 h-10 rounded-full bg-jpa-red border"></div>
+      <div class="w-10 h-10 rounded-full bg-jpa-green border"></div>
+      <div class="w-10 h-10 rounded-full bg-jpa-purple border"></div>
+      <div class="w-10 h-10 rounded-full bg-jpa-yellow border"></div>
+      <div class="w-10 h-10 rounded-full bg-jpa-brown border"></div>
+    </div>
+  </section>
+
+</body>
+</html>
