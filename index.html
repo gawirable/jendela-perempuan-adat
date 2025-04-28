@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jendela Perempuan Adat - Navigasi</title>
   <!-- Google Fonts: Tenor Sans & Martel -->
-  <link href="https://fonts.googleapis.com/css2?family=Martel:wght@400;700&family=Tenor+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Martel:wght@400;700&family=Tenor+Sans&display=swap"
+    rel="stylesheet">
   <!-- Tailwind CDN & Custom Config -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="tailwind.config.js"></script>
   <!-- jQuery CDN -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <!-- FontAwesome CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" />
 </head>
+
 <body class="font-body bg-black">
   <!-- Navigation Bar -->
   <nav class="bg-multatuli-yellow w-full shadow font-heading sticky top-0 z-50">
@@ -21,36 +25,52 @@
       <div class="flex justify-between h-16 items-center">
         <!-- Logo & Brand -->
         <div class="flex flex-col items-start justify-center">
-          <span class="text-multatuli-black text-lg font-bold tracking-wide leading-tight font-heading">JENDELA PEREMPUAN<br class="sm:hidden"></span>
+          <span class="text-multatuli-black text-lg font-bold tracking-wide leading-tight font-heading">JENDELA
+            PEREMPUAN<br class="sm:hidden"></span>
           <div class="flex items-center mt-1">
             <span class="font-normal text-xs align-middle text-multatuli-black mr-1">oleh</span>
             <img src="img/logo.png" alt="Project Multatuli Logo" class="h-5 w-auto inline-block align-middle">
           </div>
         </div>
         <!-- Desktop Menu with Example 3-Level Submenu -->
-        <div class="hidden md:flex space-x-8 relative">
+        <div class="hidden lg:flex space-x-8 relative">
           <div class="group relative">
-            <a href="#" class="text-multatuli-black hover:underline underline-offset-8 decoration-2 decoration-multatuli-black transition font-heading flex items-center">Koleksi
-              <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            <a href="#"
+              class="text-multatuli-black hover:underline underline-offset-8 decoration-2 decoration-multatuli-black transition font-heading flex items-center">Koleksi
+              <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
             </a>
             <!-- Level 1 Dropdown -->
-            <div class="absolute left-0 mt-2 w-44 bg-white border border-multatuli-black/10 rounded shadow-lg z-20 hidden">
+            <div
+              class="absolute left-0 mt-2 w-44 bg-white border border-multatuli-black/10 rounded shadow-lg z-20 hidden">
               <a href="#" class="block px-4 py-2 text-multatuli-black hover:bg-multatuli-yellow">Kategori 1</a>
               <div class="relative group-submenu">
-                <a href="#" class="block px-4 py-2 text-multatuli-black hover:bg-multatuli-yellow flex items-center">Kategori 2
-                  <svg class="ml-1 h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                <a href="#"
+                  class="block px-4 py-2 text-multatuli-black hover:bg-multatuli-yellow flex items-center">Kategori 2
+                  <svg class="ml-1 h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
                 </a>
                 <!-- Level 2 Dropdown -->
-                <div class="absolute top-0 left-full mt-0 ml-1 w-44 bg-white border border-multatuli-black/10 rounded shadow-lg z-30 hidden">
+                <div
+                  class="absolute top-0 left-full mt-0 ml-1 w-44 bg-white border border-multatuli-black/10 rounded shadow-lg z-30 hidden">
                   <a href="#" class="block px-4 py-2 text-multatuli-black hover:bg-multatuli-yellow">Subkategori 2.1</a>
                   <div class="relative group-subsubmenu">
-                    <a href="#" class="block px-4 py-2 text-multatuli-black hover:bg-multatuli-yellow flex items-center">Subkategori 2.2
-                      <svg class="ml-1 h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    <a href="#"
+                      class="block px-4 py-2 text-multatuli-black hover:bg-multatuli-yellow flex items-center">Subkategori
+                      2.2
+                      <svg class="ml-1 h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
                     </a>
                     <!-- Level 3 Dropdown -->
-                    <div class="absolute top-0 left-full mt-0 ml-1 w-44 bg-white border border-multatuli-black/10 rounded shadow-lg z-40 hidden">
-                      <a href="#" class="block px-4 py-2 text-multatuli-black hover:bg-multatuli-yellow">Sub-subkategori 2.2.1</a>
-                      <a href="#" class="block px-4 py-2 text-multatuli-black hover:bg-multatuli-yellow">Sub-subkategori 2.2.2</a>
+                    <div
+                      class="absolute top-0 left-full mt-0 ml-1 w-44 bg-white border border-multatuli-black/10 rounded shadow-lg z-40 hidden">
+                      <a href="#" class="block px-4 py-2 text-multatuli-black hover:bg-multatuli-yellow">Sub-subkategori
+                        2.2.1</a>
+                      <a href="#" class="block px-4 py-2 text-multatuli-black hover:bg-multatuli-yellow">Sub-subkategori
+                        2.2.2</a>
                     </div>
                   </div>
                 </div>
@@ -58,15 +78,21 @@
               <a href="#" class="block px-4 py-2 text-multatuli-black hover:bg-multatuli-yellow">Kategori 3</a>
             </div>
           </div>
-          <a href="#" class="text-multatuli-black hover:underline underline-offset-8 decoration-2 decoration-multatuli-black transition font-heading">Beranda</a>
-          <a href="#" class="text-multatuli-black hover:underline underline-offset-8 decoration-2 decoration-multatuli-black transition font-heading">Kolaborasi</a>
-          <a href="#" class="text-multatuli-black hover:underline underline-offset-8 decoration-2 decoration-multatuli-black transition font-heading">Tentang Kami</a>
-          <a href="#" class="text-multatuli-black hover:underline underline-offset-8 decoration-2 decoration-multatuli-black transition font-heading">Kontak</a>
+          <a href="#"
+            class="text-multatuli-black hover:underline underline-offset-8 decoration-2 decoration-multatuli-black transition font-heading">Beranda</a>
+          <a href="#"
+            class="text-multatuli-black hover:underline underline-offset-8 decoration-2 decoration-multatuli-black transition font-heading">Kolaborasi</a>
+          <a href="#"
+            class="text-multatuli-black hover:underline underline-offset-8 decoration-2 decoration-multatuli-black transition font-heading">Tentang
+            Kami</a>
+          <a href="#"
+            class="text-multatuli-black hover:underline underline-offset-8 decoration-2 decoration-multatuli-black transition font-heading">Kontak</a>
         </div>
         <!-- Mobile menu button -->
-        <div class="md:hidden flex items-center">
+        <div class="lg:hidden flex items-center">
           <button id="mobile-menu-button" class="text-multatuli-black focus:outline-none" aria-label="Buka menu">
-            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
           </button>
@@ -74,22 +100,34 @@
       </div>
     </div>
     <!-- Mobile Menu Dropdown with Example 3-Level Submenu -->
-    <div id="mobile-menu" class="md:hidden hidden bg-multatuli-yellow px-4 pb-4">
+    <div id="mobile-menu" class="lg:hidden hidden bg-multatuli-yellow px-4 pb-4">
       <div class="relative">
-        <button class="block py-2 text-multatuli-black font-heading hover:underline w-full text-left flex items-center justify-between" onclick="$('#submenu1').slideToggle(200);">Koleksi
-          <svg class="ml-2 h-4 w-4 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        <button
+          class="block py-2 text-multatuli-black font-heading hover:underline w-full text-left flex items-center justify-between"
+          onclick="$('#submenu1').slideToggle(200);">Koleksi
+          <svg class="ml-2 h-4 w-4 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
         </button>
         <div id="submenu1" class="hidden ml-4">
           <a href="#" class="block py-2 text-multatuli-black hover:underline">Kategori 1</a>
           <div class="relative">
-            <button class="block py-2 text-multatuli-black hover:underline w-full text-left flex items-center justify-between" onclick="$('#submenu2').slideToggle(200);">Kategori 2
-              <svg class="ml-2 h-3 w-3 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            <button
+              class="block py-2 text-multatuli-black hover:underline w-full text-left flex items-center justify-between"
+              onclick="$('#submenu2').slideToggle(200);">Kategori 2
+              <svg class="ml-2 h-3 w-3 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
             </button>
             <div id="submenu2" class="hidden ml-4">
               <a href="#" class="block py-2 text-multatuli-black hover:underline">Subkategori 2.1</a>
               <div class="relative">
-                <button class="block py-2 text-multatuli-black hover:underline w-full text-left flex items-center justify-between" onclick="$('#submenu3').slideToggle(200);">Subkategori 2.2
-                  <svg class="ml-2 h-3 w-3 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                <button
+                  class="block py-2 text-multatuli-black hover:underline w-full text-left flex items-center justify-between"
+                  onclick="$('#submenu3').slideToggle(200);">Subkategori 2.2
+                  <svg class="ml-2 h-3 w-3 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
                 </button>
                 <div id="submenu3" class="hidden ml-4">
                   <a href="#" class="block py-2 text-multatuli-black hover:underline">Sub-subkategori 2.2.1</a>
@@ -109,37 +147,54 @@
   </nav>
 
   <!-- Section 1: Hero Full Height -->
-  <section class="relative min-h-screen w-full flex flex-col justify-center items-center bg-black overflow-hidden" id="hero-section">
+  <section class="relative min-h-screen w-full flex flex-col justify-center items-center bg-black overflow-hidden"
+    id="hero-section">
     <!-- Background Masonry Foto (container, responsive, no overflow) -->
-    <div class="fixed left-0 right-0 z-0 pointer-events-none select-none flex justify-center" style="top: 4rem; height: calc(100vh - 4rem);">
-      <div class="w-full max-w-7xl h-full flex flex-col justify-center py-2 px-1 sm:py-5 sm:px-3 overflow-hidden rounded-xl bg-transparent">
+    <div class="fixed left-0 right-0 z-0 pointer-events-none select-none flex justify-center"
+      style="top: 4rem; height: calc(100vh - 4rem);">
+      <div
+        class="w-full max-w-7xl h-full flex flex-col justify-center py-2 px-1 sm:py-5 sm:px-3 overflow-hidden rounded-xl bg-transparent">
         <div class="flex flex-col sm:flex-row w-full h-[calc(100%-0px)] sm:h-1/2 gap-1 sm:gap-3 mb-3 sm:p-0 p-2">
-          <img src="https://picsum.photos/id/11/800/600" alt="img1" class="object-cover w-full sm:w-1/2 h-[29vh] sm:h-full grayscale opacity-30 rounded-md">
-          <img src="https://picsum.photos/id/12/800/600" alt="img2" class="object-cover w-full sm:w-1/4 h-[29vh] sm:h-full grayscale opacity-30 rounded-md mt-1 sm:mt-0">
-          <img src="https://picsum.photos/id/13/800/600" alt="img3" class="object-cover w-full sm:w-1/4 h-[29vh] sm:h-full grayscale opacity-30 rounded-md mt-1 sm:mt-0">
+          <img src="https://picsum.photos/id/11/800/600" alt="img1"
+            class="object-cover w-full sm:w-1/2 h-[29vh] sm:h-full grayscale opacity-30 rounded-md">
+          <img src="https://picsum.photos/id/12/800/600" alt="img2"
+            class="object-cover w-full sm:w-1/4 h-[29vh] sm:h-full grayscale opacity-30 rounded-md mt-1 sm:mt-0">
+          <img src="https://picsum.photos/id/13/800/600" alt="img3"
+            class="object-cover w-full sm:w-1/4 h-[29vh] sm:h-full grayscale opacity-30 rounded-md mt-1 sm:mt-0">
         </div>
         <div class="hidden sm:flex flex-col sm:flex-row w-full h-1/2 gap-1 sm:gap-3">
-          <img src="https://picsum.photos/id/14/800/600" alt="img4" class="object-cover w-full sm:w-1/2 h-[33vw] sm:h-full grayscale opacity-30 rounded-md">
-          <img src="https://picsum.photos/id/15/800/600" alt="img5" class="object-cover w-full sm:w-1/4 h-[33vw] sm:h-full grayscale opacity-30 rounded-md mt-1 sm:mt-0">
-          <img src="https://picsum.photos/id/16/800/600" alt="img6" class="object-cover w-full sm:w-1/4 h-[33vw] sm:h-full grayscale opacity-30 rounded-md mt-1 sm:mt-0">
+          <img src="https://picsum.photos/id/14/800/600" alt="img4"
+            class="object-cover w-full sm:w-1/2 h-[33vw] sm:h-full grayscale opacity-30 rounded-md">
+          <img src="https://picsum.photos/id/15/800/600" alt="img5"
+            class="object-cover w-full sm:w-1/4 h-[33vw] sm:h-full grayscale opacity-30 rounded-md mt-1 sm:mt-0">
+          <img src="https://picsum.photos/id/16/800/600" alt="img6"
+            class="object-cover w-full sm:w-1/4 h-[33vw] sm:h-full grayscale opacity-30 rounded-md mt-1 sm:mt-0">
         </div>
       </div>
     </div>
     <!-- Section Welcome (overlay, muncul pertama, background kuning transparan) -->
-    <div id="welcome-section" class="fixed inset-0 z-30 flex flex-col items-center justify-center bg-yellow-400 bg-opacity-90 transition-opacity duration-700">
+    <div id="welcome-section"
+      class="fixed inset-0 z-30 flex flex-col items-center justify-center bg-yellow-400 bg-opacity-90 transition-opacity duration-700">
       <div class="max-w-2xl mx-auto text-center text-multatuli-black font-heading px-4">
         <h1 class="text-3xl md:text-4xl font-bold mb-6">Selamat Datang di Jendela Perempuan</h1>
-        <p class="text-lg md:text-xl mb-4">Jendela Perempuan adalah Arsip Kolektif Digital dengan fokus melayani Perempuan yang terpinggirkan.</p>
-        <button id="welcome-scroll-btn" class="mt-6 bg-black/40 border-2 border-white rounded-full w-14 h-14 flex items-center justify-center text-white text-2xl shadow-lg focus:outline-none mx-auto animate-bounce">
+        <p class="text-lg md:text-xl mb-4">Jendela Perempuan adalah Arsip Kolektif Digital dengan fokus melayani
+          Perempuan yang terpinggirkan.</p>
+        <button id="welcome-scroll-btn"
+          class="mt-6 bg-black/40 border-2 border-white rounded-full w-14 h-14 flex items-center justify-center text-white text-2xl shadow-lg focus:outline-none mx-auto animate-bounce">
           <i class="fas fa-computer-mouse"></i>
         </button>
       </div>
     </div>
     <!-- Konten Hero -->
-    <div id="main-hero-content" class="relative z-10 flex flex-col items-center justify-center w-full h-full opacity-0 pointer-events-none transition-opacity duration-700">
+    <div id="main-hero-content"
+      class="relative z-10 flex flex-col items-center justify-center w-full h-full opacity-0 pointer-events-none transition-opacity duration-700">
       <div class="max-w-3xl mx-auto text-center text-white font-body text-lg md:text-xl drop-shadow-lg space-y-6 px-4">
-        <p>Jendela Perempuan Adat adalah upaya Project Multatuli meningkatkan “keterlihatan dan keterdengaran” mereka yang paling diabaikan di industri media massa, melalui sebuah arsip kolektif perempuan yang bisa membuka wawasan kita tentang karya–karya mereka: mereka yang menjaga alam dan budaya, garda depan ketahanan pangan, dan melawan penguasa yang zalim.</p>
-        <p>Mereka adalah para perempuan yang mengubah dunia menjadi lebih baik untuk semua orang, apapun gendernya, kelasnya, dan usianya.</p>
+        <p>Jendela Perempuan Adat adalah upaya Project Multatuli meningkatkan “keterlihatan dan keterdengaran” mereka
+          yang paling diabaikan di industri media massa, melalui sebuah arsip kolektif perempuan yang bisa membuka
+          wawasan kita tentang karya–karya mereka: mereka yang menjaga alam dan budaya, garda depan ketahanan pangan,
+          dan melawan penguasa yang zalim.</p>
+        <p>Mereka adalah para perempuan yang mengubah dunia menjadi lebih baik untuk semua orang, apapun gendernya,
+          kelasnya, dan usianya.</p>
         <!-- <button class="mt-6 bg-black/40 border-2 border-white rounded-full w-14 h-14 flex items-center justify-center text-white text-2xl shadow-lg focus:outline-none mx-auto">
           <i class="fas fa-computer-mouse"></i>
         </button> -->
@@ -168,28 +223,32 @@
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
         <div class="flex flex-col items-center">
           <p class="text-5xl font-bold text-multatuli-black">5000</p>
-          <p class="text-sm flex items-center mt-2"><span class="inline-block w-2 h-2 bg-multatuli-black rotate-45 mr-2"></span> Koleksi</p>
+          <p class="text-sm flex items-center mt-2"><span
+              class="inline-block w-2 h-2 bg-multatuli-black rotate-45 mr-2"></span> Koleksi</p>
         </div>
         <div class="flex flex-col items-center">
           <p class="text-5xl font-bold text-multatuli-black">123</p>
-          <p class="text-sm flex items-center mt-2"><span class="inline-block w-2 h-2 bg-multatuli-black rotate-45 mr-2"></span> Komunitas</p>
+          <p class="text-sm flex items-center mt-2"><span
+              class="inline-block w-2 h-2 bg-multatuli-black rotate-45 mr-2"></span> Komunitas</p>
         </div>
         <div class="flex flex-col items-center">
           <p class="text-5xl font-bold text-multatuli-black">20</p>
-          <p class="text-sm flex items-center mt-2"><span class="inline-block w-2 h-2 bg-multatuli-black rotate-45 mr-2"></span> Provinsi</p>
+          <p class="text-sm flex items-center mt-2"><span
+              class="inline-block w-2 h-2 bg-multatuli-black rotate-45 mr-2"></span> Provinsi</p>
         </div>
         <div class="flex flex-col items-center">
           <p class="text-5xl font-bold text-multatuli-black">854</p>
-          <p class="text-sm flex items-center mt-2"><span class="inline-block w-2 h-2 bg-multatuli-black rotate-45 mr-2"></span> Kolaborasi</p>
+          <p class="text-sm flex items-center mt-2"><span
+              class="inline-block w-2 h-2 bg-multatuli-black rotate-45 mr-2"></span> Kolaborasi</p>
         </div>
       </div>
     </div>
-    
+
     <!-- Peta Leaflet -->
     <div class="w-full h-[500px] bg-[#7ECFDF] relative">
       <div id="map" class="w-full h-full z-10"></div>
     </div>
-    
+
     <!-- Tombol Lihat Semua -->
     <div class="flex justify-center -mt-6 relative z-20">
       <a href="#" class="bg-black text-white font-heading py-4 px-8 rounded-full hover:bg-opacity-80 transition-all">
@@ -207,7 +266,8 @@
           <div class="flex items-center text-sm text-white mb-2">
             <span class="mr-1">◆</span> Jawa Tengah
           </div>
-          <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-3">Parion Brekeling: Tradisi Kesetaraan Peran Perempuan dan Laki-Laki di Tanah Jawa</h3>
+          <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-3">Parion Brekeling: Tradisi Kesetaraan
+            Peran Perempuan dan Laki-Laki di Tanah Jawa</h3>
           <div class="text-xs text-jpa-yellow2 space-x-2 mb-4 underline underline-offset-8">
             <span>Budaya</span>
             <span>Masyarakat Adat</span>
@@ -217,14 +277,18 @@
             <span>Waktu baca: 5 Menit</span>
           </div>
           <p class="text-sm text-white mb-6 font-body">
-            Tradisi adat Brekeling adalah perpaduan ajaran Islam dengan kearifan lokal Jawa. Kejawen, mereka juga biasa dikenal. Pada tradisi ini, peran penting diemban perempuan, pula yang memang akan menyiapkan semua kebutuhan.
+            Tradisi adat Brekeling adalah perpaduan ajaran Islam dengan kearifan lokal Jawa. Kejawen, mereka juga biasa
+            dikenal. Pada tradisi ini, peran penting diemban perempuan, pula yang memang akan menyiapkan semua
+            kebutuhan.
           </p>
-          <a href="#" class="inline-block border border-white text-white font-heading py-2 px-6 rounded-full hover:bg-white hover:text-black transition-all">
+          <a href="#"
+            class="inline-block border border-white text-white font-heading py-2 px-6 rounded-full hover:bg-white hover:text-black transition-all">
             Lanjut Baca
           </a>
         </div>
         <div class="w-full md:w-1/2 order-1 md:order-2">
-          <img src="https://picsum.photos/id/20/800/600" alt="Parion Brekeling" class="rounded-lg w-full h-auto object-cover aspect-video md:aspect-auto">
+          <img src="https://picsum.photos/id/20/800/600" alt="Parion Brekeling"
+            class="rounded-lg w-full h-auto object-cover aspect-video md:aspect-auto">
         </div>
       </div>
 
@@ -232,14 +296,14 @@
       <div class="bg-jpa-brick p-6 md:p-10 flex flex-col md:flex-row items-center gap-6 md:gap-10">
         <div class="w-full md:w-1/2 order-2 md:order-1">
           <div class="flex items-center justify-between mb-2">
-             <div class="flex items-center text-sm text-white">
-                <span class="mr-1">◆</span> Papua
-             </div>
-             <div class="flex items-center space-x-2">
-                 <span class="text-xs font-heading text-white">Partnership</span>
-                 <img src="img/logo.png" alt="Partner Logo 1" class="h-5">
-                 <img src="img/logo.png" alt="Partner Logo 2" class="h-5">
-             </div>
+            <div class="flex items-center text-sm text-white">
+              <span class="mr-1">◆</span> Papua
+            </div>
+            <div class="flex items-center space-x-2">
+              <span class="text-xs font-heading text-white">Partnership</span>
+              <img src="img/logo.png" alt="Partner Logo 1" class="h-5">
+              <img src="img/logo.png" alt="Partner Logo 2" class="h-5">
+            </div>
           </div>
           <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-3">Mama Lihat Awan Jatuh</h3>
           <div class="text-xs text-jpa-yellow2 space-x-2 mb-4 underline underline-offset-8">
@@ -251,16 +315,24 @@
             <span>Durasi: 10 Menit</span>
           </div>
           <p class="text-sm text-white mb-6 font-body">
-            Cerita Mama Berenda Yance, seorang perempuan suku Asyu, menyusuri sungai Bigul sembari mencerna kehidupan masa lalunya yang jungkir balik ditelan raksasa sawit.
+            Cerita Mama Berenda Yance, seorang perempuan suku Asyu, menyusuri sungai Bigul sembari mencerna kehidupan
+            masa lalunya yang jungkir balik ditelan raksasa sawit.
           </p>
-          <a href="#" class="inline-block border border-white text-white font-heading py-2 px-6 rounded-full hover:bg-white hover:text-black transition-all">
+          <a href="#"
+            class="inline-block border border-white text-white font-heading py-2 px-6 rounded-full hover:bg-white hover:text-black transition-all">
             Tonton Video
           </a>
         </div>
         <div class="w-full md:w-1/2 order-1 md:order-2 relative">
-          <img src="https://picsum.photos/id/22/800/600" alt="Mama Lihat Awan Jatuh" class="rounded-lg w-full h-auto object-cover aspect-video md:aspect-auto">
+          <img src="https://picsum.photos/id/22/800/600" alt="Mama Lihat Awan Jatuh"
+            class="rounded-lg w-full h-auto object-cover aspect-video md:aspect-auto">
           <button class="absolute inset-0 flex items-center justify-center">
-            <svg class="w-16 h-16 text-white opacity-80 hover:opacity-100 transition-opacity" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+            <svg class="w-16 h-16 text-white opacity-80 hover:opacity-100 transition-opacity" fill="currentColor"
+              viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                clip-rule="evenodd"></path>
+            </svg>
           </button>
         </div>
       </div>
@@ -271,7 +343,8 @@
           <div class="flex items-center text-sm text-white mb-2">
             <span class="mr-1">◆</span> Palembang
           </div>
-          <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-3">Menjaga Warisan Keluarga Demi Masa Depan Bersama</h3>
+          <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-3">Menjaga Warisan Keluarga Demi Masa
+            Depan Bersama</h3>
           <div class="text-xs text-jpa-yellow2 space-x-2 mb-4 underline underline-offset-8">
             <span>Budaya</span>
             <span>Indigenous Knowledge</span>
@@ -283,108 +356,115 @@
           <p class="text-sm text-white mb-6 font-body">
             Bumi Perempuan Tunggu Tubang di Muara Enim.
           </p>
-          <a href="#" class="inline-block border border-white text-white font-heading py-2 px-6 rounded-full hover:bg-white hover:text-black transition-all">
+          <a href="#"
+            class="inline-block border border-white text-white font-heading py-2 px-6 rounded-full hover:bg-white hover:text-black transition-all">
             Lanjut Baca
           </a>
         </div>
         <div class="w-full md:w-1/2 order-1 md:order-2">
-          <img src="https://picsum.photos/id/23/800/600" alt="Menjaga Warisan Keluarga" class="rounded-lg w-full h-auto object-cover aspect-video md:aspect-auto">
+          <img src="https://picsum.photos/id/23/800/600" alt="Menjaga Warisan Keluarga"
+            class="rounded-lg w-full h-auto object-cover aspect-video md:aspect-auto">
         </div>
       </div>
 
       <!-- Card 4: Call to Action -->
       <div class="relative bg-multatuli-yellow py-16 rounded-b-xl ">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-8 md:gap-12">
-            <div class="w-full md:w-1/3 flex justify-center md:justify-start">
-                <img src="img/cta.png" alt="Ilustrasi Kontribusi" class="max-w-xs w-full h-auto">
-            </div>
-            <div class="w-full md:w-2/3 text-center md:text-left">
-                <h2 class="font-heading text-3xl md:text-4xl font-bold text-multatuli-black mb-4">Arsip Kolektif tidak akan bisa lengkap tanpa bantuanmu.</h2>
-                <p class="text-base md:text-lg text-multatuli-black mb-6 font-body">
-                    Bantu kami dengan menjadi bagian dari jejaring Jendela Perempuan Adat. Kamu dapat berkontribusi ke dalam arsip sesuai dengan guideline yang ada.
-                </p>
-                <a href="#" class="inline-block bg-multatuli-black text-white font-heading py-3 px-8 rounded-full hover:bg-opacity-80 transition-all">
-                    Saya mau membantu
-                </a>
-            </div>
+          <div class="w-full md:w-1/3 flex justify-center md:justify-start">
+            <img src="img/cta.png" alt="Ilustrasi Kontribusi" class="max-w-xs w-full h-auto">
+          </div>
+          <div class="w-full md:w-2/3 text-center md:text-left">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-multatuli-black mb-4">Arsip Kolektif tidak akan
+              bisa lengkap tanpa bantuanmu.</h2>
+            <p class="text-base md:text-lg text-multatuli-black mb-6 font-body">
+              Bantu kami dengan menjadi bagian dari jejaring Jendela Perempuan Adat. Kamu dapat berkontribusi ke dalam
+              arsip sesuai dengan guideline yang ada.
+            </p>
+            <a href="#"
+              class="inline-block bg-multatuli-black text-white font-heading py-3 px-8 rounded-full hover:bg-opacity-80 transition-all">
+              Saya mau membantu
+            </a>
+          </div>
         </div>
 
-    </div>
+      </div>
     </div>
   </section>
 
-<!-- Footer -->
-<footer class="relative bg-multatuli-black text-white py-8 font-heading">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-      <!-- Kolom Home -->
-      <div class="text-center">
-        <h4 class="text-sm font-bold uppercase tracking-wider mb-4">HOME</h4>
-        <ul class="space-y-2 text-sm text-white/80">
-          <li><a href="#" class="hover:text-white">Link 1</a></li>
-          <li><a href="#" class="hover:text-white">Link 2</a></li>
-          <li><a href="#" class="hover:text-white">Link 3</a></li>
-          <li><a href="#" class="hover:text-white">Link 4</a></li>
-        </ul>
+  <!-- Footer -->
+  <footer class="relative bg-multatuli-black text-white py-8 font-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+        <!-- Kolom Home -->
+        <div class="text-center">
+          <h4 class="text-sm font-bold uppercase tracking-wider mb-4">HOME</h4>
+          <ul class="space-y-2 text-sm text-white/80">
+            <li><a href="#" class="hover:text-white">Link 1</a></li>
+            <li><a href="#" class="hover:text-white">Link 2</a></li>
+            <li><a href="#" class="hover:text-white">Link 3</a></li>
+            <li><a href="#" class="hover:text-white">Link 4</a></li>
+          </ul>
+        </div>
+        <!-- Kolom Koleksi -->
+        <div class="text-center">
+          <h4 class="text-sm font-bold uppercase tracking-wider mb-4">KOLEKSI</h4>
+          <ul class="space-y-2 text-sm text-white/80">
+            <li><a href="#" class="hover:text-white">Link 5</a></li>
+            <li><a href="#" class="hover:text-white">Link 6</a></li>
+            <li><a href="#" class="hover:text-white">Link 7</a></li>
+            <li><a href="#" class="hover:text-white">Link 8</a></li>
+          </ul>
+        </div>
+        <!-- Kolom Kolaborasi -->
+        <div class="text-center">
+          <h4 class="text-sm font-bold uppercase tracking-wider mb-4">KOLABORASI</h4>
+          <ul class="space-y-2 text-sm text-white/80">
+            <li><a href="#" class="hover:text-white">Link 9</a></li>
+            <li><a href="#" class="hover:text-white">Link 10</a></li>
+            <li><a href="#" class="hover:text-white">Link 11</a></li>
+            <li><a href="#" class="hover:text-white">Link 12</a></li>
+          </ul>
+        </div>
+        <!-- Kolom Tentang Kami -->
+        <div class="text-center">
+          <h4 class="text-sm font-bold uppercase tracking-wider mb-4">TENTANG KAMI</h4>
+          <ul class="space-y-2 text-sm text-white/80">
+            <li><a href="#" class="hover:text-white">Link 13</a></li>
+            <li><a href="#" class="hover:text-white">Link 14</a></li>
+            <li><a href="#" class="hover:text-white">Link 15</a></li>
+            <li><a href="#" class="hover:text-white">Link 16</a></li>
+          </ul>
+        </div>
       </div>
-      <!-- Kolom Koleksi -->
-      <div class="text-center">
-        <h4 class="text-sm font-bold uppercase tracking-wider mb-4">KOLEKSI</h4>
-        <ul class="space-y-2 text-sm text-white/80">
-          <li><a href="#" class="hover:text-white">Link 5</a></li>
-          <li><a href="#" class="hover:text-white">Link 6</a></li>
-          <li><a href="#" class="hover:text-white">Link 7</a></li>
-          <li><a href="#" class="hover:text-white">Link 8</a></li>
-        </ul>
-      </div>
-      <!-- Kolom Kolaborasi -->
-      <div class="text-center">
-        <h4 class="text-sm font-bold uppercase tracking-wider mb-4">KOLABORASI</h4>
-        <ul class="space-y-2 text-sm text-white/80">
-          <li><a href="#" class="hover:text-white">Link 9</a></li>
-          <li><a href="#" class="hover:text-white">Link 10</a></li>
-          <li><a href="#" class="hover:text-white">Link 11</a></li>
-          <li><a href="#" class="hover:text-white">Link 12</a></li>
-        </ul>
-      </div>
-      <!-- Kolom Tentang Kami -->
-      <div class="text-center">
-        <h4 class="text-sm font-bold uppercase tracking-wider mb-4">TENTANG KAMI</h4>
-        <ul class="space-y-2 text-sm text-white/80">
-          <li><a href="#" class="hover:text-white">Link 13</a></li>
-          <li><a href="#" class="hover:text-white">Link 14</a></li>
-          <li><a href="#" class="hover:text-white">Link 15</a></li>
-          <li><a href="#" class="hover:text-white">Link 16</a></li>
-        </ul>
+      <!-- Logo Section -->
+      <div class="text-center pt-8">
+        <span class="text-2xl font-bold tracking-wide leading-tight font-heading">JENDELA PEREMPUAN</span>
+        <div class="flex items-center justify-center mt-2">
+          <span class="font-normal text-xs align-middle text-white/80 mr-1">oleh</span>
+          <img src="img/logo.png" alt="Project Multatuli Logo" class="h-6 w-auto inline-block align-middle">
+        </div>
       </div>
     </div>
-    <!-- Logo Section -->
-    <div class="text-center pt-8">
-      <span class="text-2xl font-bold tracking-wide leading-tight font-heading">JENDELA PEREMPUAN</span>
-      <div class="flex items-center justify-center mt-2">
-        <span class="font-normal text-xs align-middle text-white/80 mr-1">oleh</span>
-        <img src="img/logo.png" alt="Project Multatuli Logo" class="h-6 w-auto inline-block align-middle">
-      </div>
-    </div>
-  </div>
-</footer>
+  </footer>
 
   <!-- Leaflet CSS dan JS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous"></script>
-  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous"></script>
+
   <script>
     // Inisialisasi peta
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       // Membuat peta dengan center di Indonesia
       var map = L.map('map').setView([-2.5, 118], 5);
-      
+
       // Menambahkan tile layer (peta dasar)
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         maxZoom: 18
       }).addTo(map);
-      
+
       // Custom icon untuk marker
       var customIcon = L.icon({
         iconUrl: 'img/pin.png',
@@ -392,18 +472,18 @@
         iconAnchor: [15, 30],
         popupAnchor: [0, -30]
       });
-      
+
       // Data lokasi (contoh)
       var locations = [
         { lat: -6.2, lng: 106.8, title: "Papua", content: "Mama Lihat Awan Jatuh", format: "Video" },
         { lat: -8.4, lng: 115.2, title: "Bali", content: "Cerita dari Desa", format: "Audio" },
         { lat: -7.8, lng: 110.4, title: "Jawa", content: "Penjaga Tradisi", format: "Foto" }
       ];
-      
+
       // Menambahkan marker dan popup
-      locations.forEach(function(loc) {
-        var marker = L.marker([loc.lat, loc.lng], {icon: customIcon}).addTo(map);
-        
+      locations.forEach(function (loc) {
+        var marker = L.marker([loc.lat, loc.lng], { icon: customIcon }).addTo(map);
+
         // Membuat konten popup dengan styling yang sesuai
         var popupContent = `
           <div class="bg-white rounded-lg overflow-hidden" style="width:250px;">
@@ -419,13 +499,13 @@
             </div>
           </div>
         `;
-        
+
         marker.bindPopup(popupContent, {
           maxWidth: 250,
           className: 'custom-popup'
         });
       });
-      
+
       // Custom CSS untuk popup
       var style = document.createElement('style');
       style.textContent = `
@@ -445,8 +525,9 @@
       document.head.appendChild(style);
     });
   </script>
-  
+
   <script src="welcome.js"></script>
   <script src="menu.js"></script>
 </body>
+
 </html>
