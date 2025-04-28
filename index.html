@@ -147,13 +147,136 @@
     </div>
   </section>
 
+  <!-- Section 2: Statistik & Peta -->
+  <section class="relative bg-multatuli-yellow rounded-b-[50px] pb-10 overflow-hidden">
+    <!-- Statistik -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="flex flex-col items-center justify-center mb-4">
+        <div class="flex justify-center items-center mb-4">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+        </div>
+        <h2 class="text-xl font-heading text-multatuli-black">Masuk & Jelajahi</h2>
+      </div>
+      
+      <!-- Statistik Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="flex flex-col items-center">
+          <p class="text-5xl font-bold text-multatuli-black">5000</p>
+          <p class="text-sm flex items-center mt-2"><span class="inline-block w-2 h-2 bg-multatuli-black rotate-45 mr-2"></span> Koleksi</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <p class="text-5xl font-bold text-multatuli-black">123</p>
+          <p class="text-sm flex items-center mt-2"><span class="inline-block w-2 h-2 bg-multatuli-black rotate-45 mr-2"></span> Komunitas</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <p class="text-5xl font-bold text-multatuli-black">20</p>
+          <p class="text-sm flex items-center mt-2"><span class="inline-block w-2 h-2 bg-multatuli-black rotate-45 mr-2"></span> Provinsi</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <p class="text-5xl font-bold text-multatuli-black">854</p>
+          <p class="text-sm flex items-center mt-2"><span class="inline-block w-2 h-2 bg-multatuli-black rotate-45 mr-2"></span> Kolaborasi</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Peta Leaflet -->
+    <div class="w-full h-[500px] bg-[#7ECFDF] relative">
+      <div id="map" class="w-full h-full z-10"></div>
+    </div>
+    
+    <!-- Tombol Lihat Semua -->
+    <div class="flex justify-center -mt-6 relative z-20">
+      <a href="#" class="bg-black text-white font-heading py-4 px-8 rounded-full hover:bg-opacity-80 transition-all">
+        Lihat Semua Koleksi
+      </a>
+    </div>
+  </section>
+
   <!-- Placeholder Sections -->
   <section class="min-h-[200px] border-b border-multatuli-black/10"></section>
   <section class="min-h-[200px] border-b border-multatuli-black/10"></section>
   <section class="min-h-[200px] border-b border-multatuli-black/10"></section>
   <section class="min-h-[200px] border-b border-multatuli-black/10"></section>
-  <section class="min-h-[200px] border-b border-multatuli-black/10"></section>
 
+  <!-- Leaflet CSS dan JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous"></script>
+  
+  <script>
+    // Inisialisasi peta
+    document.addEventListener('DOMContentLoaded', function() {
+      // Membuat peta dengan center di Indonesia
+      var map = L.map('map').setView([-2.5, 118], 5);
+      
+      // Menambahkan tile layer (peta dasar)
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 18
+      }).addTo(map);
+      
+      // Custom icon untuk marker
+      var customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: '<div style="background-color:#FF8C00; width:30px; height:30px; transform:rotate(45deg); border:2px solid white;"></div>',
+        iconSize: [30, 30],
+        iconAnchor: [15, 15]
+      });
+      
+      // Data lokasi (contoh)
+      var locations = [
+        { lat: -6.2, lng: 106.8, title: "Papua", content: "Mama Lihat Awan Jatuh", format: "Video" },
+        { lat: -8.4, lng: 115.2, title: "Bali", content: "Cerita dari Desa", format: "Audio" },
+        { lat: -7.8, lng: 110.4, title: "Jawa", content: "Penjaga Tradisi", format: "Foto" }
+      ];
+      
+      // Menambahkan marker dan popup
+      locations.forEach(function(loc) {
+        var marker = L.marker([loc.lat, loc.lng], {icon: customIcon}).addTo(map);
+        
+        // Membuat konten popup dengan styling yang sesuai
+        var popupContent = `
+          <div class="bg-white rounded-lg overflow-hidden" style="width:250px;">
+            <div class="h-32 bg-gray-200 relative">
+              <img src="https://picsum.photos/300/200" alt="${loc.content}" class="w-full h-full object-cover">
+            </div>
+            <div class="p-3 bg-[#FF6F5B] text-white">
+              <div class="flex items-center text-xs mb-1">
+                <span class="mr-1">◆</span> ${loc.title}
+              </div>
+              <h3 class="text-lg font-bold">${loc.content}</h3>
+              <p class="text-xs">Format: ${loc.format}</p>
+            </div>
+          </div>
+        `;
+        
+        marker.bindPopup(popupContent, {
+          maxWidth: 250,
+          className: 'custom-popup'
+        });
+      });
+      
+      // Custom CSS untuk popup
+      var style = document.createElement('style');
+      style.textContent = `
+        .custom-popup .leaflet-popup-content-wrapper {
+          padding: 0;
+          overflow: hidden;
+          border-radius: 8px;
+        }
+        .custom-popup .leaflet-popup-content {
+          margin: 0;
+          width: 250px !important;
+        }
+        .custom-popup .leaflet-popup-tip {
+          background: #FF6F5B;
+        }
+      `;
+      document.head.appendChild(style);
+    });
+  </script>
+  
   <script src="welcome.js"></script>
   <script src="menu.js"></script>
 </body>
