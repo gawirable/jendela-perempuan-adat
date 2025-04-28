@@ -177,6 +177,10 @@
             showHero();
           }, 700);
         }
+        welcomeSection.addEventListener('click', function(e) {
+          e.preventDefault();
+          hideWelcome();
+        });
         scrollBtn.addEventListener('click', function(e) {
           e.preventDefault();
           hideWelcome();
