@@ -8,22 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Martel:wght@400;700&family=Tenor+Sans&display=swap" rel="stylesheet">
   <!-- Tailwind CDN & Custom Config -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            heading: ['"Tenor Sans"', 'sans-serif'],
-            body: ['Martel', 'serif'],
-          },
-          colors: {
-            'multatuli-yellow': '#FFD94D',
-            'multatuli-black': '#000',
-          }
-        }
-      }
-    }
-  </script>
+  <script src="tailwind.config.js"></script>
   <!-- jQuery CDN -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <!-- FontAwesome CDN -->
@@ -160,39 +145,6 @@
         </button>
       </div>
     </div>
-    <script>
-      // Welcome Section scroll logic
-      document.addEventListener('DOMContentLoaded', function() {
-        var welcomeSection = document.getElementById('welcome-section');
-        var scrollBtn = document.getElementById('welcome-scroll-btn');
-        var mainHero = document.getElementById('main-hero-content');
-        function showHero() {
-          mainHero.classList.remove('opacity-0', 'pointer-events-none');
-          mainHero.classList.add('opacity-100');
-        }
-        function hideWelcome() {
-          welcomeSection.classList.add('opacity-0', 'pointer-events-none');
-          setTimeout(function() {
-            welcomeSection.style.display = 'none';
-            showHero();
-          }, 700);
-        }
-        welcomeSection.addEventListener('click', function(e) {
-          e.preventDefault();
-          hideWelcome();
-        });
-        scrollBtn.addEventListener('click', function(e) {
-          e.preventDefault();
-          hideWelcome();
-        });
-        // Optional: hide on scroll
-        window.addEventListener('scroll', function() {
-          if(window.scrollY > 10 && welcomeSection.style.display !== 'none') hideWelcome();
-        });
-        // Show hero if welcome is hidden (refresh fallback)
-        if(welcomeSection.style.display === 'none') showHero();
-      });
-    </script>
   </section>
 
   <!-- Placeholder Sections -->
@@ -202,32 +154,7 @@
   <section class="min-h-[200px] border-b border-multatuli-black/10"></section>
   <section class="min-h-[200px] border-b border-multatuli-black/10"></section>
 
-  <script>
-    // Toggle mobile menu
-    $(function() {
-      $('#mobile-menu-button').on('click', function() {
-        $('#mobile-menu').slideToggle(200);
-      });
-
-      // Delay hide for desktop submenu (3 levels)
-      // Applies to: .group, .group-submenu, .group-subsubmenu
-      function addSubmenuDelay(selector, submenuSelector) {
-        let timeout;
-        $(document).on('mouseenter', selector, function() {
-          clearTimeout(timeout);
-          $(this).children(submenuSelector).stop(true, true).fadeIn(120);
-        });
-        $(document).on('mouseleave', selector, function() {
-          const $submenu = $(this).children(submenuSelector);
-          timeout = setTimeout(function() {
-            $submenu.stop(true, true).fadeOut(120);
-          }, 300); // 220ms delay before hiding
-        });
-      }
-      addSubmenuDelay('.group', '.absolute');
-      addSubmenuDelay('.group-submenu', '.absolute');
-      addSubmenuDelay('.group-subsubmenu', '.absolute');
-    });
-  </script>
+  <script src="welcome.js"></script>
+  <script src="menu.js"></script>
 </body>
 </html>
