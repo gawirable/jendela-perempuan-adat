@@ -34,21 +34,65 @@
                             class="h-5 w-auto inline-block align-middle">
                     </div>
                 </div>
-                <!-- Desktop Menu -->
+                <!-- Desktop Menu with Example 3-Level Submenu -->
                 <div class="hidden lg:flex space-x-8 relative">
-                    <!-- Menu items akan tetap sama seperti index.html -->
-                    <!-- Contoh struktur menu (sesuaikan sesuai kebutuhan halaman baru) -->
+                  <div class="group relative">
                     <a href="#"
-                        class="text-multatuli-black hover:underline underline-offset-8 decoration-2 decoration-multatuli-black transition font-heading">Beranda</a>
-                    <a href="#"
-                        class="text-multatuli-black hover:underline underline-offset-8 decoration-2 decoration-multatuli-black transition font-heading">Koleksi</a>
-                    <a href="#"
-                        class="text-multatuli-black hover:underline underline-offset-8 decoration-2 decoration-multatuli-black transition font-heading">Kolaborasi</a>
-                    <a href="#"
-                        class="text-multatuli-black hover:underline underline-offset-8 decoration-2 decoration-multatuli-black transition font-heading">Tentang
-                        Kami</a>
-                    <a href="#"
-                        class="text-multatuli-black hover:underline underline-offset-8 decoration-2 decoration-multatuli-black transition font-heading">Kontak</a>
+                      class="text-multatuli-black hover:underline underline-offset-8 decoration-2 decoration-multatuli-black transition font-heading flex items-center">Koleksi
+                      <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </a>
+                    <!-- Level 1 Dropdown -->
+                    <div
+                      class="absolute left-0 mt-2 w-44 bg-white border border-multatuli-black/10 rounded shadow-lg z-20 hidden">
+                      <a href="#" class="block px-4 py-2 text-multatuli-black hover:bg-multatuli-yellow">Kategori
+                        1</a>
+                      <div class="relative group-submenu">
+                        <a href="#"
+                          class="block px-4 py-2 text-multatuli-black hover:bg-multatuli-yellow flex items-center">Kategori
+                          2
+                          <svg class="ml-1 h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                          </svg>
+                        </a>
+                        <!-- Level 2 Dropdown -->
+                        <div
+                          class="absolute top-0 left-full mt-0 ml-1 w-44 bg-white border border-multatuli-black/10 rounded shadow-lg z-30 hidden">
+                          <a href="#" class="block px-4 py-2 text-multatuli-black hover:bg-multatuli-yellow">Subkategori
+                            2.1</a>
+                          <div class="relative group-subsubmenu">
+                            <a href="#"
+                              class="block px-4 py-2 text-multatuli-black hover:bg-multatuli-yellow flex items-center">Subkategori
+                              2.2
+                              <svg class="ml-1 h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                              </svg>
+                            </a>
+                            <!-- Level 3 Dropdown -->
+                            <div
+                              class="absolute top-0 left-full mt-0 ml-1 w-44 bg-white border border-multatuli-black/10 rounded shadow-lg z-40 hidden">
+                              <a href="#" class="block px-4 py-2 text-multatuli-black hover:bg-multatuli-yellow">Sub-subkategori
+                                2.2.1</a>
+                              <a href="#" class="block px-4 py-2 text-multatuli-black hover:bg-multatuli-yellow">Sub-subkategori
+                                2.2.2</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <a href="#" class="block px-4 py-2 text-multatuli-black hover:bg-multatuli-yellow">Kategori
+                        3</a>
+                    </div>
+                  </div>
+                  <a href="#"
+                    class="text-multatuli-black hover:underline underline-offset-8 decoration-2 decoration-multatuli-black transition font-heading">Beranda</a>
+                  <a href="#"
+                    class="text-multatuli-black hover:underline underline-offset-8 decoration-2 decoration-multatuli-black transition font-heading">Kolaborasi</a>
+                  <a href="#"
+                    class="text-multatuli-black hover:underline underline-offset-8 decoration-2 decoration-multatuli-black transition font-heading">Tentang
+                    Kami</a>
+                  <a href="#"
+                    class="text-multatuli-black hover:underline underline-offset-8 decoration-2 decoration-multatuli-black transition font-heading">Kontak</a>
                 </div>
                 <!-- Mobile menu button -->
                 <div class="lg:hidden flex items-center">
@@ -62,10 +106,47 @@
                 </div>
             </div>
         </div>
-        <!-- Mobile Menu -->
+        <!-- Mobile Menu Dropdown with Example 3-Level Submenu -->
         <div id="mobile-menu" class="lg:hidden hidden bg-multatuli-yellow px-4 pb-4">
+            <div class="relative">
+                <button
+                    class="block py-2 text-multatuli-black font-heading hover:underline w-full text-left flex items-center justify-between"
+                    onclick="$('#submenu1').slideToggle(200);">Koleksi
+                    <svg class="ml-2 h-4 w-4 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div id="submenu1" class="hidden ml-4">
+                    <a href="#" class="block py-2 text-multatuli-black hover:underline">Kategori 1</a>
+                    <div class="relative">
+                        <button
+                            class="block py-2 text-multatuli-black hover:underline w-full text-left flex items-center justify-between"
+                            onclick="$('#submenu2').slideToggle(200);">Kategori 2
+                            <svg class="ml-2 h-3 w-3 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div id="submenu2" class="hidden ml-4">
+                            <a href="#" class="block py-2 text-multatuli-black hover:underline">Subkategori 2.1</a>
+                            <div class="relative">
+                                <button
+                                    class="block py-2 text-multatuli-black hover:underline w-full text-left flex items-center justify-between"
+                                    onclick="$('#submenu3').slideToggle(200);">Subkategori 2.2
+                                    <svg class="ml-2 h-3 w-3 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+                                <div id="submenu3" class="hidden ml-4">
+                                    <a href="#" class="block py-2 text-multatuli-black hover:underline">Sub-subkategori 2.2.1</a>
+                                    <a href="#" class="block py-2 text-multatuli-black hover:underline">Sub-subkategori 2.2.2</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="block py-2 text-multatuli-black hover:underline">Kategori 3</a>
+                </div>
+            </div>
             <a href="#" class="block py-2 text-multatuli-black font-heading hover:underline">Beranda</a>
-            <a href="#" class="block py-2 text-multatuli-black font-heading hover:underline">Koleksi</a>
             <a href="#" class="block py-2 text-multatuli-black font-heading hover:underline">Kolaborasi</a>
             <a href="#" class="block py-2 text-multatuli-black font-heading hover:underline">Tentang Kami</a>
             <a href="#" class="block py-2 text-multatuli-black font-heading hover:underline">Kontak</a>
@@ -73,12 +154,12 @@
     </nav>
 
     <!-- Main Content - Ganti bagian ini untuk halaman baru -->
-    <main class="relative">
+    <main class="relative sm:p-8 p-4">
         <!-- Contoh placeholder untuk konten utama -->
-        <section class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h1 class="text-4xl font-bold text-multatuli-black mb-6">[Judul Halaman]</h1>
-                <p class="text-lg text-multatuli-black/80">[Isi konten halaman baru akan ditambahkan di sini]</p>
+        <section class="bg-jpa-green text-white px-4 sm:px-8 py-14 sm:py-20 rounded-t-3xl">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-2xl sm:text-4xl font-bold font-heading mb-6">[Judul Halaman]</h2>
+                <p class="font-body text-base sm:text-lg leading-relaxed">[Isi konten halaman baru akan ditambahkan di sini]</p>
             </div>
         </section>
     </main>
