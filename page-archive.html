@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jendela Perempuan Adat - Arsip</title>
+    <!-- Google Fonts: Tenor Sans & Martel -->
+    <link href="https://fonts.googleapis.com/css2?family=Martel:wght@400;700&family=Tenor+Sans&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CDN & Custom Config -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" />
+</head>
+
+<body class="font-body bg-jpa-granite">
+    <!-- Navigation Bar -->
+    <nav class="bg-multatuli-yellow w-full shadow font-heading sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <!-- Logo & Brand -->
+                <div class="flex flex-col items-start justify-center">
+                    <span
+                        class="text-multatuli-black text-lg font-bold tracking-wide leading-tight font-heading">JENDELA
+                        PEREMPUAN<br class="sm:hidden"></span>
+                    <div class="flex items-center mt-1">
+                        <span class="font-normal text-xs align-middle text-multatuli-black mr-1">oleh</span>
+                        <img src="img/logo.png" alt="Project Multatuli Logo"
+                            class="h-5 w-auto inline-block align-middle">
+                    </div>
+                </div>
+                <!-- Desktop Menu with Example 3-Level Submenu -->
+                <div class="hidden lg:flex space-x-8 relative">
+                    <div class="group relative">
+                        <a href="#"
+                            class="text-multatuli-black hover:underline underline-offset-8 decoration-2 decoration-multatuli-black transition font-heading flex items-center">Koleksi
+                            <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </a>
+                        <!-- Level 1 Dropdown -->
+                        <div
+                            class="absolute left-0 mt-2 w-44 bg-white border border-multatuli-black/10 rounded shadow-lg z-20 hidden">
+                            <a href="#" class="block px-4 py-2 text-multatuli-black hover:bg-multatuli-yellow">Kategori
+                                1</a>
+                            <div class="relative group-submenu">
+                                <a href="#"
+                                    class="block px-4 py-2 text-multatuli-black hover:bg-multatuli-yellow flex items-center">Kategori
+                                    2
+                                    <svg class="ml-1 h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </a>
+                                <!-- Level 2 Dropdown -->
+                                <div
+                                    class="absolute top-0 left-full mt-0 ml-1 w-44 bg-white border border-multatuli-black/10 rounded shadow-lg z-30 hidden">
+                                    <a href="#"
+                                        class="block px-4 py-2 text-multatuli-black hover:bg-multatuli-yellow">Subkategori
+                                        2.1</a>
+                                    <div class="relative group-subsubmenu">
+                                        <a href="#"
+                                            class="block px-4 py-2 text-multatuli-black hover:bg-multatuli-yellow flex items-center">Subkategori
+                                            2.2
+                                            <svg class="ml-1 h-3 w-3" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7" />
+                                            </svg>
+                                        </a>
+                                        <!-- Level 3 Dropdown -->
+                                        <div
+                                            class="absolute top-0 left-full mt-0 ml-1 w-44 bg-white border border-multatuli-black/10 rounded shadow-lg z-40 hidden">
+                                            <a href="#"
+                                                class="block px-4 py-2 text-multatuli-black hover:bg-multatuli-yellow">Sub-subkategori
+                                                2.2.1</a>
+                                            <a href="#"
+                                                class="block px-4 py-2 text-multatuli-black hover:bg-multatuli-yellow">Sub-subkategori
+                                                2.2.2</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="block px-4 py-2 text-multatuli-black hover:bg-multatuli-yellow">Kategori
+                                3</a>
+                        </div>
+                    </div>
+                    <a href="#"
+                        class="text-multatuli-black hover:underline underline-offset-8 decoration-2 decoration-multatuli-black transition font-heading">Beranda</a>
+                    <a href="#"
+                        class="text-multatuli-black hover:underline underline-offset-8 decoration-2 decoration-multatuli-black transition font-heading">Kolaborasi</a>
+                    <a href="#"
+                        class="text-multatuli-black hover:underline underline-offset-8 decoration-2 decoration-multatuli-black transition font-heading">Tentang
+                        Kami</a>
+                    <a href="#"
+                        class="text-multatuli-black hover:underline underline-offset-8 decoration-2 decoration-multatuli-black transition font-heading">Kontak</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-multatuli-black focus:outline-none"
+                        aria-label="Buka menu">
+                        <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Dropdown with Example 3-Level Submenu -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-multatuli-yellow px-4 pb-4">
+            <div class="relative">
+                <button
+                    class="block py-2 text-multatuli-black font-heading hover:underline w-full text-left flex items-center justify-between"
+                    onclick="$('#submenu1').slideToggle(200);">Koleksi
+                    <svg class="ml-2 h-4 w-4 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div id="submenu1" class="hidden ml-4">
+                    <a href="#" class="block py-2 text-multatuli-black hover:underline">Kategori 1</a>
+                    <div class="relative">
+                        <button
+                            class="block py-2 text-multatuli-black hover:underline w-full text-left flex items-center justify-between"
+                            onclick="$('#submenu2').slideToggle(200);">Kategori 2
+                            <svg class="ml-2 h-3 w-3 inline-block" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div id="submenu2" class="hidden ml-4">
+                            <a href="#" class="block py-2 text-multatuli-black hover:underline">Subkategori 2.1</a>
+                            <div class="relative">
+                                <button
+                                    class="block py-2 text-multatuli-black hover:underline w-full text-left flex items-center justify-between"
+                                    onclick="$('#submenu3').slideToggle(200);">Subkategori 2.2
+                                    <svg class="ml-2 h-3 w-3 inline-block" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+                                <div id="submenu3" class="hidden ml-4">
+                                    <a href="#" class="block py-2 text-multatuli-black hover:underline">Sub-subkategori
+                                        2.2.1</a>
+                                    <a href="#" class="block py-2 text-multatuli-black hover:underline">Sub-subkategori
+                                        2.2.2</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="block py-2 text-multatuli-black hover:underline">Kategori 3</a>
+                </div>
+            </div>
+            <a href="#" class="block py-2 text-multatuli-black font-heading hover:underline">Beranda</a>
+            <a href="#" class="block py-2 text-multatuli-black font-heading hover:underline">Kolaborasi</a>
+            <a href="#" class="block py-2 text-multatuli-black font-heading hover:underline">Tentang Kami</a>
+            <a href="#" class="block py-2 text-multatuli-black font-heading hover:underline">Kontak</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="relative sm:p-8 p-4 text-white">
+        <!-- Kategori Section -->
+        <section class="px-4 sm:px-8 py-14 sm:py-20">
+            <h2 class="text-3xl font-bold font-heading mb-6 text-[#FFE066] drop-shadow">Kategori</h2>
+            <div class="flex overflow-x-auto space-x-6 pb-4">
+                <!-- Category Card 1 -->
+                <a href="#"
+                    class="block flex-shrink-0 w-60 sm:w-80 relative rounded-lg overflow-hidden group border-2 border-black sm:h-60 h-40">
+                    <img src="https://picsum.photos/id/1011/400/240" alt="Hutan, Tanah Adat"
+                        class="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
+                        <p class="text-xs text-white/80">Okt 2023 - Jan 2024</p>
+                        <h3 class="font-heading font-bold text-lg mt-1">Hutan, Tanah Adat</h3>
+                        <p class="text-xs text-white/80 mt-1">4 Artikel</p>
+                    </div>
+                </a>
+                <!-- Category Card 2 -->
+                <a href="#"
+                    class="block flex-shrink-0 w-60 sm:w-80 relative rounded-lg overflow-hidden group border-2 border-black sm:h-60 h-40">
+                    <img src="https://picsum.photos/id/1012/400/240" alt="Pertambangan, Nikel"
+                        class="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center"">
+                        <p class=" text-xs text-white/80">Jun 2023 - Dec 2023</p>
+                        <h3 class="font-heading font-bold text-lg mt-1">Pertambangan, Nikel</h3>
+                        <p class="text-xs text-white/80 mt-1">13 Artikel · 1 Video</p>
+                    </div>
+                </a>
+                <!-- Category Card 3 -->
+                <a href="#"
+                    class="block flex-shrink-0 w-60 sm:w-80 relative rounded-lg overflow-hidden group border-2 border-black sm:h-60 h-40">
+                    <img src="https://picsum.photos/id/1013/400/240" alt="Perbudakan, Ham"
+                        class="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center"">
+                        <p class=" text-xs text-white/80">May 2023 - Aug 2023</p>
+                        <h3 class="font-heading font-bold text-lg mt-1">Perbudakan, Ham</h3>
+                        <p class="text-xs text-white/80 mt-1">2 Artikel</p>
+                    </div>
+                </a>
+                <!-- Category Card 4 -->
+                <a href="#"
+                    class="block flex-shrink-0 w-60 sm:w-80 relative rounded-lg overflow-hidden group border-2 border-black sm:h-60 h-40">
+                    <img src="https://picsum.photos/id/1014/400/240" alt="Hutan, Tanah Adat"
+                        class="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
+                        <p class="text-xs text-white/80">Okt 2023 - Jan 2024</p>
+                        <h3 class="font-heading font-bold text-lg mt-1">Hutan, Tanah Adat</h3>
+                        <p class="text-xs text-white/80 mt-1">4 Artikel</p>
+                    </div>
+                </a>
+                <!-- Category Card 5 -->
+                <a href="#"
+                    class="block flex-shrink-0 w-60 sm:w-80 relative rounded-lg overflow-hidden group border-2 border-black sm:h-60 h-40">
+                    <img src="https://picsum.photos/id/1015/400/240" alt="Pertambangan, Nikel"
+                        class="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center"">
+                        <p class=" text-xs text-white/80">Jun 2023 - Dec 2023</p>
+                        <h3 class="font-heading font-bold text-lg mt-1">Pertambangan, Nikel</h3>
+                        <p class="text-xs text-white/80 mt-1">13 Artikel · 1 Video</p>
+                    </div>
+                </a>
+                <!-- Category Card 6 -->
+                <a href="#"
+                    class="block flex-shrink-0 w-60 sm:w-80 relative rounded-lg overflow-hidden group border-2 border-black sm:h-60 h-40">
+                    <img src="https://picsum.photos/id/1016/400/240" alt="Perbudakan, Ham"
+                        class="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center"">
+                        <p class=" text-xs text-white/80">May 2023 - Aug 2023</p>
+                        <h3 class="font-heading font-bold text-lg mt-1">Perbudakan, Ham</h3>
+                        <p class="text-xs text-white/80 mt-1">2 Artikel</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Semua Koleksi Arsip Section -->
+        <section class="px-4 sm:px-8 pb-14 sm:pb-20">
+            <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-6">Semua Koleksi Arsip</h2>
+            <div class="flex mb-2">
+                <button id="toggle-filter"
+                    class="text-2xl sm:text-2xl font-heading focus:outline-none flex items-center" aria-expanded="true">
+                    <span id="toggle-filter-text">Sembunyikan Filter</span>
+                    <svg id="toggle-filter-icon" class="ml-2 h-5 w-5 transition-transform" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Filters -->
+            <div id="filter-content" class="mb-8">
+                <div class="flex flex-col sm:flex-row gap-8">
+                    <!-- Lokasi Geografis -->
+                    <div>
+                        <h4 class="text-base font-bold font-heading mb-2 text-[#FFE066] border-b-2 border-white pb-1">
+                            Letak Geografis</h4>
+                        <ul class="grid grid-rows-3 grid-flow-col gap-x-8 gap-y-1 text-sm">
+                            <li><span class="text-[#FFE066] mr-2">◆</span>Sumatra</li>
+                            <li><span class="text-[#FFE066] mr-2">◆</span>Jawa</li>
+                            <li><span class="text-[#FFE066] mr-2">◆</span>Bali</li>
+                            <li><span class="text-[#FFE066] mr-2">◆</span>Kalimantan</li>
+                            <li><span class="text-[#FFE066] mr-2">◆</span>Sulawesi</li>
+                            <li><span class="text-[#FFE066] mr-2">◆</span>NTT</li>
+                            <li><span class="text-[#FFE066] mr-2">◆</span>Maluku</li>
+                            <li><span class="text-[#FFE066] mr-2">◆</span>Papua</li>
+                        </ul>
+                    </div>
+                    <!-- Komunitas -->
+                    <div>
+                        <h4 class="text-base font-bold font-heading mb-2 text-[#FFE066] border-b-2 border-white pb-1">
+                            Komunitas</h4>
+                        <ul class="space-y-1 text-sm">
+                            <li><span class="text-[#FFE066] mr-2">◆</span>Kolaborator</li>
+                            <li class="ml-6">Lembaga</li>
+                            <li class="ml-6">Individu</li>
+                            <li><span class="text-[#FFE066] mr-2">◆</span>Pendukung</li>
+                        </ul>
+                    </div>
+                    <!-- Periode Waktu -->
+                    <div>
+                        <h4 class="text-base font-bold font-heading mb-2 text-[#FFE066] border-b-2 border-white pb-1">
+                            Periode Waktu</h4>
+                        <ul class="space-y-1 text-sm">
+                            <li><span class="text-[#FFE066] mr-2">◆</span>Pra 1965</li>
+                            <li><span class="text-[#FFE066] mr-2">◆</span>Post 1965</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Archive Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+                <!-- Archive Card 1 -->
+                <div class="bg-black rounded-lg overflow-hidden shadow-lg flex flex-col border border-[#333]">
+                    <a href="#" class="block group p-4">
+                        <img src="https://picsum.photos/id/1021/800/600"
+                            alt="Menjaga Warisan Keluarga Demi Masa Depan Bersama"
+                            class="w-full h-64 object-cover grayscale group-hover:scale-105 transition-transform duration-300">
+                    </a>
+                    <div class="p-5 flex flex-col flex-1">
+                        <div class="flex justify-between items-center text-xs text-white/70 mb-2">
+                            <span><i class="fas fa-map-marker-alt mr-1"></i> Palembang</span>
+                            <span>Juli 2023 | Artikel</span>
+                        </div>
+                        <a href="#" class="block group flex-1">
+                            <h3 class="font-heading font-bold text-lg mb-2 hover:text-[#FFE066] transition">Menjaga
+                                Warisan Keluarga Demi Masa Depan Bersama</h3>
+                        </a>
+                        <div class="flex flex-wrap gap-2 text-xs mb-2">
+                            <span class="text-[#FFE066] border-b-2 border-[#FFE066] pb-0.5">Budaya</span>
+                            <span class="text-[#FFE066] border-b-2 border-[#FFE066] pb-0.5">Indigenous
+                                Knowledge</span>
+                        </div>
+                        <div class="mt-4">
+                            <img src="img/logo.png" alt="Tutura ID Logo" class="h-5 w-auto">
+                        </div>
+                    </div>
+                </div>
+                <!-- Archive Card 2 -->
+                <div class="bg-black rounded-lg overflow-hidden shadow-lg flex flex-col border border-[#333]">
+                    <a href="#" class="block group p-4">
+                        <img src="https://picsum.photos/id/1022/800/600"
+                            alt="Perlon Bonokeling: Tradisi Kesetaraan Peran Perempuan dan Laki-Laki di Tanah Jawa"
+                            class="w-full h-64 object-cover grayscale group-hover:scale-105 transition-transform duration-300">
+                    </a>
+                    <div class="p-5 flex flex-col flex-1">
+                        <div class="flex justify-between items-center text-xs text-white/70 mb-2">
+                            <span><i class="fas fa-map-marker-alt mr-1"></i> Jawa Tengah</span>
+                            <span>Mei 2024 | Artikel</span>
+                        </div>
+                        <a href="#" class="block group flex-1">
+                            <h3 class="font-heading font-bold text-lg mb-2 hover:text-[#FFE066] transition">Perlon
+                                Bonokeling: Tradisi Kesetaraan Peran Perempuan dan Laki-Laki di Tanah Jawa</h3>
+                        </a>
+                        <div class="flex flex-wrap gap-2 text-xs mb-2">
+                            <span class="text-[#FFE066] border-b-2 border-[#FFE066] pb-0.5">Budaya</span>
+                            <span class="text-[#FFE066] border-b-2 border-[#FFE066] pb-0.5">Masyarakat Adat</span>
+                        </div>
+                        <div class="flex items-center gap-2 mt-4">
+                            <img src="img/logo.png" alt="Tutura ID Logo" class="h-5 w-auto">
+                            <img src="img/logo.png" alt="Garutcraft Logo" class="h-5 w-auto">
+                        </div>
+                    </div>
+                </div>
+                <!-- Archive Card 3 -->
+                <div class="bg-black rounded-lg overflow-hidden shadow-lg flex flex-col border border-[#333]">
+                    <a href="#" class="block group p-4">
+                        <img src="https://picsum.photos/id/1023/800/600" alt="Mama Lihat Awan Jatuh"
+                            class="w-full h-64 object-cover grayscale group-hover:scale-105 transition-transform duration-300">
+                    </a>
+                    <div class="p-5 flex flex-col flex-1">
+                        <div class="flex justify-between items-center text-xs text-white/70 mb-2">
+                            <span><i class="fas fa-map-marker-alt mr-1"></i> Papua</span>
+                            <span>Juli 2023 | Artikel</span>
+                        </div>
+                        <a href="#" class="block group flex-1">
+                            <h3 class="font-heading font-bold text-lg mb-2 hover:text-[#FFE066] transition">Mama
+                                Lihat
+                                Awan Jatuh</h3>
+                        </a>
+                        <div class="flex flex-wrap gap-2 text-xs mb-2">
+                            <span class="text-[#FFE066] border-b-2 border-[#FFE066] pb-0.5">Seni</span>
+                            <span class="text-[#FFE066] border-b-2 border-[#FFE066] pb-0.5">Masyarakat Adat</span>
+                        </div>
+                        <div class="flex items-center gap-2 mt-4">
+                            <img src="img/logo.png" alt="Tutura ID Logo" class="h-5 w-auto">
+                            <img src="img/logo.png" alt="Garutcraft Logo" class="h-5 w-auto">
+                        </div>
+                    </div>
+                </div>
+                <!-- Archive Card 4 -->
+                <div class="bg-black rounded-lg overflow-hidden shadow-lg flex flex-col border border-[#333]">
+                    <a href="#" class="block group p-4">
+                        <img src="https://picsum.photos/id/1024/800/600"
+                            alt="Menjaga Warisan Keluarga Demi Masa Depan Bersama"
+                            class="w-full h-64 object-cover grayscale group-hover:scale-105 transition-transform duration-300">
+                    </a>
+                    <div class="p-5 flex flex-col flex-1">
+                        <div class="flex justify-between items-center text-xs text-white/70 mb-2">
+                            <span><i class="fas fa-map-marker-alt mr-1"></i> Palembang</span>
+                            <span>Juli 2023 | Artikel</span>
+                        </div>
+                        <a href="#" class="block group flex-1">
+                            <h3 class="font-heading font-bold text-lg mb-2 hover:text-[#FFE066] transition">Menjaga
+                                Warisan Keluarga Demi Masa Depan Bersama</h3>
+                        </a>
+                        <div class="flex flex-wrap gap-2 text-xs mb-2">
+                            <span class="text-[#FFE066] border-b-2 border-[#FFE066] pb-0.5">Budaya</span>
+                            <span class="text-[#FFE066] border-b-2 border-[#FFE066] pb-0.5">Indigenous
+                                Knowledge</span>
+                        </div>
+                        <div class="mt-4">
+                            <img src="img/logo.png" alt="Tutura ID Logo" class="h-5 w-auto">
+                        </div>
+                    </div>
+                </div>
+                <!-- Archive Card 5 -->
+                <div class="bg-black rounded-lg overflow-hidden shadow-lg flex flex-col border border-[#333]">
+                    <a href="#" class="block group p-4">
+                        <img src="https://picsum.photos/id/1025/800/600"
+                            alt="Perlon Bonokeling: Tradisi Kesetaraan Peran Perempuan dan Laki-Laki di Tanah Jawa"
+                            class="w-full h-64 object-cover grayscale group-hover:scale-105 transition-transform duration-300">
+                    </a>
+                    <div class="p-5 flex flex-col flex-1">
+                        <div class="flex justify-between items-center text-xs text-white/70 mb-2">
+                            <span><i class="fas fa-map-marker-alt mr-1"></i> Jawa Tengah</span>
+                            <span>Mei 2024 | Artikel</span>
+                        </div>
+                        <a href="#" class="block group flex-1">
+                            <h3 class="font-heading font-bold text-lg mb-2 hover:text-[#FFE066] transition">Perlon
+                                Bonokeling: Tradisi Kesetaraan Peran Perempuan dan Laki-Laki di Tanah Jawa</h3>
+                        </a>
+                        <div class="flex flex-wrap gap-2 text-xs mb-2">
+                            <span class="text-[#FFE066] border-b-2 border-[#FFE066] pb-0.5">Budaya</span>
+                            <span class="text-[#FFE066] border-b-2 border-[#FFE066] pb-0.5">Masyarakat Adat</span>
+                        </div>
+                        <div class="flex items-center gap-2 mt-4">
+                            <img src="img/logo.png" alt="Tutura ID Logo" class="h-5 w-auto">
+                            <img src="img/logo.png" alt="Garutcraft Logo" class="h-5 w-auto">
+                        </div>
+                    </div>
+                </div>
+                <!-- Archive Card 6 -->
+                <div class="bg-black rounded-lg overflow-hidden shadow-lg flex flex-col border border-[#333]">
+                    <a href="#" class="block group p-4">
+                        <img src="https://picsum.photos/id/1026/800/600" alt="Mama Lihat Awan Jatuh"
+                            class="w-full h-64 object-cover grayscale group-hover:scale-105 transition-transform duration-300">
+                    </a>
+                    <div class="p-5 flex flex-col flex-1">
+                        <div class="flex justify-between items-center text-xs text-white/70 mb-2">
+                            <span><i class="fas fa-map-marker-alt mr-1"></i> Papua</span>
+                            <span>Juli 2023 | Artikel</span>
+                        </div>
+                        <a href="#" class="block group flex-1">
+                            <h3 class="font-heading font-bold text-lg mb-2 hover:text-[#FFE066] transition">Mama
+                                Lihat
+                                Awan Jatuh</h3>
+                        </a>
+                        <div class="flex flex-wrap gap-2 text-xs mb-2">
+                            <span class="text-[#FFE066] border-b-2 border-[#FFE066] pb-0.5">Seni</span>
+                            <span class="text-[#FFE066] border-b-2 border-[#FFE066] pb-0.5">Masyarakat Adat</span>
+                        </div>
+                        <div class="flex items-center gap-2 mt-4">
+                            <img src="img/logo.png" alt="Tutura ID Logo" class="h-5 w-auto">
+                            <img src="img/logo.png" alt="Garutcraft Logo" class="h-5 w-auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative bg-multatuli-black text-white py-8 font-heading">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                <!-- Kolom Home -->
+                <div class="text-center">
+                    <h4 class="text-sm font-bold uppercase tracking-wider mb-4">HOME</h4>
+                    <ul class="space-y-2 text-sm text-white/80">
+                        <li><a href="#" class="hover:text-white">Link 1</a></li>
+                        <li><a href="#" class="hover:text-white">Link 2</a></li>
+                        <li><a href="#" class="hover:text-white">Link 3</a></li>
+                        <li><a href="#" class="hover:text-white">Link 4</a></li>
+                    </ul>
+                </div>
+                <!-- Kolom Koleksi -->
+                <div class="text-center">
+                    <h4 class="text-sm font-bold uppercase tracking-wider mb-4">KOLEKSI</h4>
+                    <ul class="space-y-2 text-sm text-white/80">
+                        <li><a href="#" class="hover:text-white">Link 5</a></li>
+                        <li><a href="#" class="hover:text-white">Link 6</a></li>
+                        <li><a href="#" class="hover:text-white">Link 7</a></li>
+                        <li><a href="#" class="hover:text-white">Link 8</a></li>
+                    </ul>
+                </div>
+                <!-- Kolom Kolaborasi -->
+                <div class="text-center">
+                    <h4 class="text-sm font-bold uppercase tracking-wider mb-4">KOLABORASI</h4>
+                    <ul class="space-y-2 text-sm text-white/80">
+                        <li><a href="#" class="hover:text-white">Link 9</a></li>
+                        <li><a href="#" class="hover:text-white">Link 10</a></li>
+                        <li><a href="#" class="hover:text-white">Link 11</a></li>
+                        <li><a href="#" class="hover:text-white">Link 12</a></li>
+                    </ul>
+                </div>
+                <!-- Kolom Tentang Kami -->
+                <div class="text-center">
+                    <h4 class="text-sm font-bold uppercase tracking-wider mb-4">TENTANG KAMI</h4>
+                    <ul class="space-y-2 text-sm text-white/80">
+                        <li><a href="#" class="hover:text-white">Link 13</a></li>
+                        <li><a href="#" class="hover:text-white">Link 14</a></li>
+                        <li><a href="#" class="hover:text-white">Link 15</a></li>
+                        <li><a href="#" class="hover:text-white">Link 16</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Logo Section -->
+            <div class="text-center pt-8">
+                <span class="text-2xl font-bold tracking-wide leading-tight font-heading">JENDELA PEREMPUAN</span>
+                <div class="flex items-center justify-center mt-2">
+                    <span class="font-normal text-xs align-middle text-white/80 mr-1">oleh</span>
+                    <img src="img/logo.png" alt="Project Multatuli Logo" class="h-6 w-auto inline-block align-middle">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            $('#toggle-filter').click(function () {
+                $('#filter-content').slideToggle(200);
+                var expanded = $(this).attr('aria-expanded') === 'true';
+                $(this).attr('aria-expanded', !expanded);
+                $('#toggle-filter-text').text(expanded ? 'Cari Berdasarkan' : 'Cari Berdasarkan');
+                $('#toggle-filter-icon').toggleClass('rotate-180', !expanded);
+            });
+        });
+    </script>
+</body>
+
+</html>

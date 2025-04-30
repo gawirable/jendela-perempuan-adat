@@ -21,6 +21,7 @@ tailwind.config = {
         "jpa-brick": "#D34E24",
         "jpa-mint": "#008B8B",
         "jpa-yellow2": "#FFE180",
+        "jpa-granite": "#201F22",
       },
     },
   },
