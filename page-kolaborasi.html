@@ -194,19 +194,27 @@
           <div class="mb-8">
             <h4 class="text-lg font-heading mb-4 text-jpa-yellow2">Peran</h4>
             <div class="flex flex-wrap gap-4">
-              <a href="#" class="flex items-center text-white hover:text-jpa-yellow2">
+              <a href="#" class="collaboration-item flex items-center text-white hover:text-jpa-yellow2" 
+                 data-title="Peneliti/Akademisi" 
+                 data-content="Konten detail untuk Peneliti/Akademisi akan ditampilkan di sini. Anda dapat menambahkan deskripsi panjang tentang bagaimana peneliti atau akademisi dapat berkolaborasi dengan proyek ini.">
                 <span class="inline-block w-2 h-2 bg-white rotate-45 mr-2"></span>
                 Peneliti/Akademisi
               </a>
-              <a href="#" class="flex items-center text-white hover:text-jpa-yellow2">
+              <a href="#" class="collaboration-item flex items-center text-white hover:text-jpa-yellow2" 
+                 data-title="NGO/Aktivis" 
+                 data-content="Konten detail untuk NGO/Aktivis akan ditampilkan di sini. Jelaskan bagaimana organisasi non-pemerintah atau aktivis dapat berkontribusi pada proyek ini.">
                 <span class="inline-block w-2 h-2 bg-white rotate-45 mr-2"></span>
                 NGO/Aktivis
               </a>
-              <a href="#" class="flex items-center text-white hover:text-jpa-yellow2">
+              <a href="#" class="collaboration-item flex items-center text-white hover:text-jpa-yellow2" 
+                 data-title="Pekerja Media/Kreatif" 
+                 data-content="Konten detail untuk Pekerja Media/Kreatif akan ditampilkan di sini. Berikan informasi tentang bagaimana profesional media dan kreatif dapat berkolaborasi dalam proyek ini.">
                 <span class="inline-block w-2 h-2 bg-white rotate-45 mr-2"></span>
                 Pekerja Media/Kreatif
               </a>
-              <a href="#" class="flex items-center text-white hover:text-jpa-yellow2">
+              <a href="#" class="collaboration-item flex items-center text-white hover:text-jpa-yellow2" 
+                 data-title="Industri Lain" 
+                 data-content="Konten detail untuk Industri Lain akan ditampilkan di sini. Jelaskan peluang kolaborasi untuk sektor industri lainnya yang ingin berkontribusi pada proyek ini.">
                 <span class="inline-block w-2 h-2 bg-white rotate-45 mr-2"></span>
                 Industri Lain
               </a>
@@ -219,11 +227,15 @@
               Kolaborasi</h4>
             <div class="border-b border-white/30 mb-4"></div>
             <div class="flex flex-wrap gap-4">
-              <a href="#" class="flex items-center text-white hover:text-jpa-yellow2">
+              <a href="#" class="collaboration-item flex items-center text-white hover:text-jpa-yellow2" 
+                 data-title="Tenaga/Skill" 
+                 data-content="Konten detail untuk Tenaga/Skill akan ditampilkan di sini. Jelaskan bagaimana orang dapat berkontribusi dengan tenaga atau keahlian mereka pada proyek ini.">
                 <span class="inline-block w-2 h-2 bg-white rotate-45 mr-2"></span>
                 Tenaga/Skill
               </a>
-              <a href="#" class="flex items-center text-white hover:text-jpa-yellow2">
+              <a href="#" class="collaboration-item flex items-center text-white hover:text-jpa-yellow2"
+                 data-title="Berdonasi" 
+                 data-content="Konten detail untuk Berdonasi akan ditampilkan di sini. Berikan informasi tentang bagaimana orang dapat mendukung proyek ini melalui donasi.">
                 <span class="inline-block w-2 h-2 bg-white rotate-45 mr-2"></span>
                 Berdonasi
               </a>
@@ -235,15 +247,21 @@
             <h4 class="text-lg font-heading mb-4 text-jpa-yellow2">Medium</h4>
             <div class="border-b border-white/30 mb-4"></div>
             <div class="flex flex-wrap gap-4">
-              <a href="#" class="flex items-center text-white hover:text-jpa-yellow2">
+              <a href="#" class="collaboration-item flex items-center text-white hover:text-jpa-yellow2"
+                 data-title="Text" 
+                 data-content="Konten detail untuk konten berbasis teks akan ditampilkan di sini. Jelaskan jenis konten teks yang dapat dikontribusikan dan format yang diterima.">
                 <span class="inline-block w-2 h-2 bg-white rotate-45 mr-2"></span>
                 Text
               </a>
-              <a href="#" class="flex items-center text-white hover:text-jpa-yellow2">
+              <a href="#" class="collaboration-item flex items-center text-white hover:text-jpa-yellow2"
+                 data-title="Visual" 
+                 data-content="Konten detail untuk konten visual akan ditampilkan di sini. Jelaskan jenis konten visual yang dapat dikontribusikan (foto, ilustrasi, dll) dan format yang diterima.">
                 <span class="inline-block w-2 h-2 bg-white rotate-45 mr-2"></span>
                 Visual
               </a>
-              <a href="#" class="flex items-center text-white hover:text-jpa-yellow2">
+              <a href="#" class="collaboration-item flex items-center text-white hover:text-jpa-yellow2"
+                 data-title="Audio" 
+                 data-content="Konten detail untuk konten audio akan ditampilkan di sini. Jelaskan jenis konten audio yang dapat dikontribusikan dan format yang diterima.">
                 <span class="inline-block w-2 h-2 bg-white rotate-45 mr-2"></span>
                 Audio
               </a>
@@ -321,9 +339,77 @@
       </div>
     </div>
   </footer>
-  <!-- Mandatory Script -->
+  
+  <!-- Modal for Collaboration Details -->
+  <div id="collaborationModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 p-4" style="display: none;">
+    <div class="flex items-center justify-center min-h-full">
+      <div class="bg-black rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+        <div class="p-6">
+          <div class="flex justify-between items-center mb-4">
+            <h3 id="modalTitle" class="text-2xl font-bold text-white font-heading"></h3>
+            <button id="closeModal" class="text-white text-2xl">&times;</button>
+          </div>
+          <div class="border-b border-white/30 mb-4"></div>
+          <div id="modalContent" class="text-white mb-6"></div>
+          <div class="flex justify-center">
+            <button id="closeModalBtn" class="px-6 py-2 bg-black text-white border-white border rounded-full font-heading hover:bg-opacity-90 transition">Daftar Sebagai</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get modal elements
+      const modal = document.getElementById('collaborationModal');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalContent = document.getElementById('modalContent');
+      const closeModal = document.getElementById('closeModal');
+      const closeModalBtn = document.getElementById('closeModalBtn');
+      
+      // Add click event to all collaboration items
+      document.querySelectorAll('.collaboration-item').forEach(item => {
+        item.addEventListener('click', function(e) {
+          e.preventDefault();
+          const title = this.getAttribute('data-title');
+          const content = this.getAttribute('data-content');
+          
+          modalTitle.textContent = title;
+          modalContent.textContent = content;
+          closeModalBtn.textContent = 'Daftar Sebagai ' + title;
+          modal.style.display = 'block';
+          document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        });
+      });
+      
+      // Close modal functions
+      function closeModalFunc() {
+        modal.style.display = 'none';
+        document.body.style.overflow = ''; // Re-enable scrolling
+      }
+      
+      closeModal.addEventListener('click', closeModalFunc);
+      closeModalBtn.addEventListener('click', closeModalFunc);
+      
+      // Close modal when clicking outside the modal content
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          closeModalFunc();
+        }
+      });
+      
+      // Close modal with Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.style.display !== 'none') {
+          closeModalFunc();
+        }
+      });
+    });
+  </script>
+  
+  <script src="welcome.js"></script>
   <script src="menu.js"></script>
-  <!-- Page Script -->
 </body>
 
 </html>
