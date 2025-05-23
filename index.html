@@ -148,7 +148,7 @@
   </nav>
 
   <!-- Section 1: Hero Full Height -->
-  <section class="relative min-h-screen w-full flex flex-col justify-center items-center bg-black overflow-hidden"
+  <section class="relative min-h-[calc(100vh-60px)] w-full flex flex-col justify-center items-center bg-black overflow-hidden"
     id="hero-section">
     <!-- Background Masonry Foto (container, responsive, no overflow) -->
     <div class="fixed left-0 right-0 z-0 pointer-events-none select-none flex justify-center"
@@ -458,7 +458,13 @@
     // Inisialisasi peta
     document.addEventListener('DOMContentLoaded', function () {
       // Membuat peta dengan center di Indonesia
-      var map = L.map('map').setView([-2.5, 118], 5);
+      var map = L.map('map', {
+        zoomControl: false  // Nonaktifkan kontrol zoom default
+      }).setView([-2.5, 118], 5);
+
+      L.control.zoom({
+        position: 'bottomright'  // Posisi kanan bawah
+      }).addTo(map);
 
       // Menambahkan tile layer (peta dasar)
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
