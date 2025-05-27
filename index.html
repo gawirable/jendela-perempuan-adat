@@ -16,6 +16,14 @@
   <!-- FontAwesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     crossorigin="anonymous" />
+  <style>
+    /* Fix popup hover behavior */
+    .group:hover .group-hover\\:block,
+    .group-submenu:hover .group-submenu\\:block,
+    .group-submenu:hover .group-submenu\\:flex {
+      display: block !important;
+    }
+  </style>
 </head>
 
 <body class="font-body bg-black">
@@ -25,7 +33,8 @@
       <div class="flex justify-between h-16 items-center">
         <!-- Logo & Brand -->
         <div class="flex flex-col items-start justify-center">
-          <a href="index.html" class="text-multatuli-black text-lg font-bold tracking-wide leading-tight font-heading hover:no-underline">JENDELA
+          <a href="index.html"
+            class="text-multatuli-black text-lg font-bold tracking-wide leading-tight font-heading hover:no-underline">JENDELA
             PEREMPUAN<br class="sm:hidden"></a>
           <div class="flex items-center mt-1">
             <span class="font-normal text-xs align-middle text-multatuli-black mr-1">oleh</span>
@@ -148,7 +157,8 @@
   </nav>
 
   <!-- Section 1: Hero Full Height -->
-  <section class="relative min-h-[calc(100vh-60px)] w-full flex flex-col justify-center items-center bg-black overflow-hidden"
+  <section
+    class="relative min-h-[calc(100vh-60px)] w-full flex flex-col justify-center items-center bg-black overflow-hidden"
     id="hero-section">
     <!-- Background Masonry Foto (container, responsive, no overflow) -->
     <div class="fixed left-0 right-0 z-0 pointer-events-none select-none flex justify-center"
@@ -516,15 +526,59 @@
           closeOnClick: false
         });
 
-        // Show popup on mouseover
-        marker.on('mouseover', function() {
-          this.openPopup();
+        var isMouseOverMarker = false;
+        var isMouseOverPopup = false;
+        var popupElement = null; // To store the popup DOM element
+
+        // Function to attempt closing the popup
+        function attemptClosePopup() {
+          // Delay slightly to allow quick mouse movements between marker and popup
+          setTimeout(function () {
+            if (!isMouseOverMarker && !isMouseOverPopup) {
+              marker.closePopup();
+            }
+          }, 100); // 100ms delay, adjust as needed
+        }
+
+        // Marker mouseover event
+        marker.on('mouseover', function () {
+          isMouseOverMarker = true;
+          marker.openPopup(); // Open the popup
         });
 
-        // Close popup on mouseout
-        marker.on('mouseout', function() {
-          this.closePopup();
+        // Marker mouseout event
+        marker.on('mouseout', function () {
+          isMouseOverMarker = false;
+          attemptClosePopup(); // Try to close after a delay
         });
+
+        // When the popup is opened, get its DOM element and attach listeners
+        marker.on('popupopen', function () {
+          popupElement = marker.getPopup().getElement(); // Get the actual DOM element of the popup
+
+          if (popupElement) {
+            // Check if listeners are already attached to prevent duplicates if popup reopens
+            if (!popupElement.dataset.listenersAttached) {
+              popupElement.addEventListener('mouseenter', function () {
+                isMouseOverPopup = true;
+              });
+              popupElement.addEventListener('mouseleave', function () {
+                isMouseOverPopup = false;
+                attemptClosePopup(); // Try to close after a delay
+              });
+              // Mark that listeners have been attached
+              popupElement.dataset.listenersAttached = 'true';
+            }
+          }
+        });
+
+        // Optional: When popup closes for any reason, reset the flag
+        marker.on('popupclose', function () {
+          isMouseOverPopup = false; // Reset flag
+          // The listeners on popupElement will remain, which is fine.
+          // If popupElement is destroyed and recreated, new listeners will be added on 'popupopen'.
+        });
+
       });
 
       // Custom CSS untuk popup
